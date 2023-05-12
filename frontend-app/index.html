@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deus Express</title>
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" /> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/font/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/font/css/all.min.css" />
+  </head>
+  <body onload="checkHashIndex();">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <div class="d-flex">
+          <a class="navbar-brand mx-5" href="./index.html">
+            <img src="./assets/images/JUDUL.png" alt="" width="70" height="70" />
+          </a>
+        </div>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+          <!-- Left links -->
+          <ul class="navbar-nav mb-lg-0">
+            <!-- Order dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Order </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="order.html#pickUp">Pick Up</a></li>
+                <li><a class="dropdown-item" href="order.html#dropOff">Drop Off</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+              </ul>
+            </li>
+            <!-- Search dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Search </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="./index.html#TT">Track & Trace</a></li>
+                <li><a class="dropdown-item" href="./index.html#SR">Shipping Rate</a></li>
+                <li><a class="dropdown-item" href="./index.html#DP">Find Drop Point</a></li>
+              </ul>
+            </li>
+            <!-- Information dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Information </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                <li><a class="dropdown-item" href="packaging.html">Packaging Information</a></li>
+                <li><a class="dropdown-item" href="term.html">Term</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+        <div class="d-flex me-5">
+          <button class="btn btn-danger" type="submit" data-bs-toggle="modal" data-bs-target="#myModal">
+            <span><i class="fa fa-user mr-3" aria-hidden="true"></i>Login / Register</span>
+          </button>
+        </div>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- END OF NAVBAR -->
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid" style="background-image: url('./assets/images/ORANG.png')">
+      <div class="container mt-5 mb-5">
+        <div class="d-flex justify-content-center mt-5">
+          <div class="container mt-5">
+            <div class="row mt-5">
+              <a class="col-sm bg-danger text-white text-center py-2 mt-5" id="btnTT" onclick="trackTrace();">
+                <span><i class="fa fa-box mr-3" aria-hidden="true"></i>Track & Trace</span>
+              </a>
+              <a class="col-sm bg-white py-2 text-dark text-center mt-5" id="btnSR" onclick="shipRate()">
+                <span><i class="fa fa-boxes-packing mr-3" aria-hidden="true"></i>Shipping Rate</span>
+              </a>
+              <a class="col-sm bg-white py-2 text-dark text-center mt-5" id="btnDP" onclick="dropPoint()">
+                <span><i class="fa fa-location mr-3" aria-hidden="true"></i>Find Drop Point</span>
+              </a>
+              <div class="container-fluid mt-3">
+                <!-- Track & Trace -->
+                <div class="card" id="receipt">
+                  <div class="card-body">
+                    <h4 class="card-title">Insert Receipt Number</h4>
+                    <form action="" method="post">
+                      <div class="input-group">
+                        <input type="search" class="form-control rounded mr-5" placeholder="Please Enter Your Waybill Number" aria-label="Search" aria-describedby="search-addon" />
+                        <button type="button" class="btn btn-danger">
+                          <span><i class="fa fa-search mr-3" aria-hidden="true"></i>Search</span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- Shipping Rate -->
+                <div class="card" id="ship">
+                  <div class="card-body">
+                    <h4 class="card-title">Shipping Rate Form</h4>
+                    <form action="" method="post">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <div class="form-group">
+                            <label for="">Source</label>
+                            <input type="text" class="form-control" placeholder="From" />
+                          </div>
+                        </div>
+                        <div class="col-md-5">
+                          <div class="form-group">
+                            <label for="">Destination</label>
+                            <input type="text" class="form-control" placeholder="To" />
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="form-group">
+                            <label for="">Weight (KG)</label>
+                            <input type="number" class="form-control" placeholder="0" />
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="form-group">
+                            <input class="form-check-control" type="checkbox" value="" id="flexCheckDefault" />
+                            <label class="form-check-label" for="flexCheckDefault">Insurence</label>
+                          </div>
+                        </div>
+                        <div class="col-md-10">
+                          <div class="form-group">
+                            <input type="text" placeholder="IDR Please Input Item Value" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="form-group">
+                            <input class="form-check-control" type="checkbox" value="" id="flexCheckDefault" />
+                            <label class="form-check-label" for="flexCheckDefault">Volume</label>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">Length (CM)</label>
+                            <input type="number" class="form-control" placeholder="0" />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">WIDTH (CM)</label>
+                            <input type="number" class="form-control" placeholder="0" />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label for="">HEIGHT (KG)</label>
+                            <input type="number" class="form-control" placeholder="0" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col text-center">
+                        <button type="button" class="justify-content-center btn btn-danger">
+                          <span><i class="fa fa-search mr-3" aria-hidden="true"></i>Search</span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- Find Drop Point -->
+                <div class="card" id="drop">
+                  <div class="card-body">
+                    <h4 class="card-title">Find Drop Point</h4>
+                    <form action="" method="post">
+                      <div class="input-group">
+                        <input type="search" class="form-control rounded mr-5" placeholder="Find Location Here" aria-label="Search" aria-describedby="search-addon" />
+
+                        <button type="button" class="btn btn-danger">
+                          <span><i class="fa fa-search mr-3" aria-hidden="true"></i>Search</span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Of Jumbotron -->
+
+    <!-- MAP & CAR -->
+    <section class="py-5">
+      <div class="container">
+        <div class="d-flex justify-content-center">
+          <img src="./assets/images/mobil.png" class="img-fluid" alt="" />
+        </div>
+      </div>
+    </section>
+    <!-- END OF MAP & CAR -->
+
+    <!-- Footer -->
+    <section class="py-5 bg-danger text-white">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./assets/images/JUDUL.png" class="img-thumbnail" width="80" alt="" />
+              <p class="fw-bold mt-2 lead">Kantor Pusat</p>
+              <p style="margin-top: -17px">PT Deus Antar Barang</p>
+              <p class="mt-4">Jl. Sudirman No. 42, Jakarta Pusat 10220, Indonesia</p>
+              <p style="margin-top: -17px">Contact Center: (62-21) 6738 8888</p>
+              <p style="margin-top: -17px">Office: (62-21) 566 12341</p>
+              <p style="margin-top: -17px">Fax: (62-21) 567 1241</p>
+              <p style="margin-top: -17px">Email: customercare@deusxpress.com</p>
+            </div>
+            <div class="col-md-3">
+              <p><b>Perusahaan Kami</b></p>
+              <a href="" class="text-white">About</a><br />
+              <a href="" class="text-white">Career</a><br />
+              <a href="" class="text-white">Standard Condition of Carriage</a><br />
+              <a href="" class="text-white">Company Rules</a><br />
+            </div>
+            <div class="col-md-3">
+              <p><b>Produk Layanan</b></p>
+              <a href="" class="text-white">Deus Xpress</a><br />
+              <a href="" class="text-white">Deus Logistic</a><br />
+              <a href="" class="text-white">Deus Freight</a><br />
+              <a href="" class="text-white">Deus International</a><br />
+            </div>
+            <div class="col-md-2">
+              <p><b>Produk Layanan</b></p>
+              <a href="" class="text-white">Deus Xpress</a><br />
+              <a href="" class="text-white">Deus Logistic</a><br />
+              <a href="" class="text-white">Deus Freight</a><br />
+              <a href="" class="text-white">Deus International</a><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Of Footer -->
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" data-bs-dismiss="modal" class="btn btn-sm btn-danger">
+              <span><i class="fa fa-close"></i></span>
+            </button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="row text-center">
+              <div class="col-6">
+                <a href="#" id="phoneTitle" class="text-danger" onclick="usingPhone()">Phone Number</a>
+                <hr id="hr1" class="bg-danger" />
+              </div>
+              <div class="col-6">
+                <a href="#" id="userEmailTitle" class="text-dark" onclick="usingUserEmail()">Username/Email</a>
+                <hr id="hr2" class="bg-dark" />
+              </div>
+            </div>
+            <form action="" method="post">
+              <div class="form-group" id="phone">
+                <label for="">Phone Number</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Phone Number" />
+              </div>
+              <div class="form-group" id="userEmail">
+                <label for="">Username / Email</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Username/Email" />
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Password" />
+              </div>
+              <a href="">Forgot Password?</a>
+              <button type="submit" class="btn btn-block btn-danger mt-3">Login</button>
+              <p class="text-primary mt-3 text-center">Dont't Have Account? <a href="#" class="text-danger">Register Now</a></p>
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+  </body>
+</html>

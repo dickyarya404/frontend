@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deus Express</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./assets/font/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/font/css/all.min.css" />
+  </head>
+  <body onload="checkHashOrder()">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+          <div class="d-flex">
+            <a class="navbar-brand mx-5" href="./index.html">
+              <img src="./assets/images/JUDUL.png" alt="" width="70" height="70" />
+            </a>
+          </div>
+  
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+            <!-- Left links -->
+            <ul class="navbar-nav mb-lg-0">
+              <!-- Order dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Order </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="order.html#pickUp">Pick Up</a></li>
+                  <li><a class="dropdown-item" href="order.html#dropOff">Drop Off</a></li>
+                  <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                </ul>
+              </li>
+              <!-- Search dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Search </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="./index.html#TT">Track & Trace</a></li>
+                  <li><a class="dropdown-item" href="./index.html#SR">Shipping Rate</a></li>
+                  <li><a class="dropdown-item" href="./index.html#DP">Find Drop Point</a></li>
+                </ul>
+              </li>
+              <!-- Information dropdown -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Information </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                  <li><a class="dropdown-item" href="packaging.html">Packaging Information</a></li>
+                  <li><a class="dropdown-item" href="term.html">Term</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+          </div>
+          <!-- Collapsible wrapper -->
+          <div class="d-flex me-5">
+            <button class="btn btn-danger" type="submit" data-bs-toggle="modal" data-bs-target="#myModal">
+              <span><i class="fa fa-user mr-3" aria-hidden="true"></i>Login / Register</span>
+            </button>
+          </div>
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+      <!-- END OF NAVBAR -->
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid" style="background-image: url('./assets/images/IMAGENAVBAR.png'); height: 200px; width: auto">
+      <div class="container">
+        <h1 class="display-5 fw-bold text-white">Order</h1>
+      </div>
+    </div>
+    <!-- End Of Jumbotron -->
+
+    <section id="pickOrder" class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-4">
+                <div class="card shadow p-3 mb-5 rounded">
+                  <div class="row card-body">
+                    <div class="col-sm-9 text-danger" id="pick" onclick="pickUp()">
+                      <h4 class="card-title">Pick Up</h4>
+                      <small class="card-text">We will pick up your package</small>
+                      <!-- <hr class="text-danger" style="width: 20%" /> -->
+                    </div>
+                    <img class="col-sm-3 img-fluid" src="./assets/images/Shipping_Siscount__5_-removebg-preview 1@2x.png" alt="sans" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card shadow p-3 mb-5 rounded">
+                  <div class="row card-body">
+                    <div class="col-sm-9" id="dropOff1" onclick="droppingOff()">
+                      <h4 class="card-title">Drop Off</h4>
+                      <small class="card-text">Drop Your Package to Our Outlet</small>
+                    </div>
+                    <img class="col-sm-3 img-fluid" src="./assets/images/Shipping_Siscount__5_-removebg-preview 1@2x.png" alt="sans" />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h3>Sender Information</h3>
+        <hr />
+        <form action="" class="mt-5" method="post">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Phone Number</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Origin City</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Postal Code</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Address</label>
+                <textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" />
+              Add to Deus Express Address Book
+            </label>
+          </div>
+
+          <h3 class="mt-5">Recipient Information</h3>
+          <hr />
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Phone Number</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Destination City</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Postal Code</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Address</label>
+                <textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="">Please Setup Your Location</label>
+                <textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" />
+                  Add to Deus Express Address Book
+                </label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" />
+                  Use Point
+                </label>
+              </div>
+            </div>
+          </div>
+          <h3 class="mt-5">Package Information</h3>
+          <hr />
+          <div class="row">
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="" class="form-label">Item Type</label>
+                <select class="form-select" name="" id="">
+                  <option selected>-Item Type-</option>
+                  <option value="">Fashion</option>
+                  <option value="">Electronic</option>
+                  <option value="">Tools</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="">Item Name</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" />
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="">Item Value</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" readonly />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="" class="form-label">Service Type</label>
+                <select class="form-select" name="" id="">
+                  <option selected>-Service Type-</option>
+                  <option value="">Express</option>
+                  <option value="">Logistic</option>
+                  <option value="">International</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="form-group">
+                <label for="">Quantity</label>
+                <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" />
+              </div>
+            </div>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" />
+              Insurance
+            </label>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="">Weight</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="">Height</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" readonly />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="">Width</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" readonly />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group">
+                <label for="">Length</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" readonly />
+              </div>
+            </div>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" />
+              Dimension
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="">Remark</label>
+            <textarea class="form-control" name="" id="" rows="3"></textarea>
+          </div>
+          <hr />
+
+          <div class="row">
+            <div class="col-md-10 text-right">Shipping Rate :</div>
+            <div class="col-md-2 text-right">Rp 0</div>
+            <div class="col-md-10 text-right">Insurance :</div>
+            <div class="col-md-2 text-right">Rp 0</div>
+            <div class="col-md-10 text-right fw-bold">
+              <h5>Total Fee :</h5>
+            </div>
+            <div class="col-md-2 text-right fw-bold">
+              <h5>Rp 0</h5>
+            </div>
+            <div class="col">
+              <div class="text-right">
+                <button class="btn btn-outline-danger">Delete</button>
+                <button class="btn btn-danger">Order</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="py-5 bg-danger text-white">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./assets/images/JUDUL.png" class="img-thumbnail" width="80" alt="" />
+              <p class="fw-bold mt-2 lead">Kantor Pusat</p>
+              <p style="margin-top: -17px">PT Deus Antar Barang</p>
+              <p class="mt-4">Jl. Sudirman No. 42, Jakarta Pusat 10220, Indonesia</p>
+              <p style="margin-top: -17px">Contact Center: (62-21) 6738 8888</p>
+              <p style="margin-top: -17px">Office: (62-21) 566 12341</p>
+              <p style="margin-top: -17px">Fax: (62-21) 567 1241</p>
+              <p style="margin-top: -17px">Email: customercare@deusxpress.com</p>
+            </div>
+            <div class="col-md-3">
+              <p><b>Perusahaan Kami</b></p>
+              <a href="" style="text-decoration: none" class="text-white">About</a><br />
+              <a href="" style="text-decoration: none" class="text-white">Career</a><br />
+              <a href="" style="text-decoration: none" class="text-white">Standard Condition of Carriage</a><br />
+              <a href="" style="text-decoration: none" class="text-white">Company Rules</a><br />
+            </div>
+            <div class="col-md-3">
+              <p><b>Produk Layanan</b></p>
+              <a href="" style="text-decoration: none" class="text-white">Deus Xpress</a><br />
+              <a href="" style="text-decoration: none" class="text-white">Deus Logistic</a><br />
+              <a href="" style="text-decoration: none" class="text-white">Deus Freight</a><br />
+              <a href="" style="text-decoration: none" class="text-white">Deus International</a><br />
+            </div>
+            <div class="col-md-2">
+              <p><b>Produk Layanan</b></p>
+              <a href="" style="text-decoration: none" class="text-white">Deus Xpress</a><br />
+              <a href="" style="text-decoration: none" class="text-white">Deus Logistic</a><br />
+              <a href="" style="text-decoration: none" class="text-white">Deus Freight</a><br />
+              <a href="" style="text-decoration: none" class="text-white">Deus International</a><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Of Footer -->
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Login</h4>
+                  <button type="button" data-bs-dismiss="modal" class="btn btn-sm btn-danger">
+                    <span><i class="fa fa-close"></i></span>
+                  </button>
+                </div>
+      
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <div class="row text-center">
+                    <div class="col-6">
+                      <a href="#" id="phoneTitle" class="text-danger" onclick="usingPhone()">Phone Number</a>
+                      <hr id="hr1" class="bg-danger" />
+                    </div>
+                    <div class="col-6">
+                      <a href="#" id="userEmailTitle" class="text-dark" onclick="usingUserEmail()">Username/Email</a>
+                      <hr id="hr2" class="bg-dark" />
+                    </div>
+                  </div>
+                  <form action="" method="post">
+                    <div class="form-group" id="phone">
+                      <label for="">Phone Number</label>
+                      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Phone Number" />
+                    </div>
+                    <div class="form-group" id="userEmail">
+                      <label for="">Username / Email</label>
+                      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Username/Email" />
+                    </div>
+                    <div class="form-group">
+                      <label for="">Password</label>
+                      <input type="password" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Password" />
+                    </div>
+                    <a href="">Forgot Password?</a>
+                    <button type="submit" class="btn btn-block btn-danger mt-3">Login</button>
+                    <p class="text-primary mt-3 text-center">Dont't Have Account? <a href="#" class="text-danger">Register Now</a></p>
+                  </form>
+                </div>
+      
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+  </body>
+</html>

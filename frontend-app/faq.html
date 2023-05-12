@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deus Express</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="./assets/font/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/font/css/all.min.css" />
+    <style type="text/css">
+      /* body{margin-top:20px;} */
+      .section_padding_130 {
+        padding-top: 130px;
+        padding-bottom: 130px;
+      }
+      .faq_area {
+        position: relative;
+        z-index: 1;
+        background-color: #f2f2f2;
+      }
+
+      .faq-accordian {
+        position: relative;
+        z-index: 1;
+      }
+      .faq-accordian .card {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 1.5rem;
+      }
+      .faq-accordian .card:last-child {
+        margin-bottom: 0;
+      }
+      .faq-accordian .card .card-header {
+        background-color: #ffffff;
+        padding: 0;
+        border-bottom-color: #ebebeb;
+      }
+      .faq-accordian .card .card-header h6 {
+        cursor: pointer;
+        padding: 1.75rem 2rem;
+        color: red;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -ms-grid-row-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+      .faq-accordian .card .card-header h6 span {
+        font-size: 1.5rem;
+      }
+      .faq-accordian .card .card-header h6.collapsed {
+        color: #070a57;
+      }
+      .faq-accordian .card .card-header h6.collapsed span {
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+      }
+      .faq-accordian .card .card-body {
+        padding: 1.75rem 2rem;
+      }
+      .faq-accordian .card .card-body p:last-child {
+        margin-bottom: 0;
+      }
+
+      @media only screen and (max-width: 575px) {
+        .support-button p {
+          font-size: 14px;
+        }
+      }
+
+      .support-button i {
+        color: #3f43fd;
+        font-size: 1.25rem;
+      }
+      @media only screen and (max-width: 575px) {
+        .support-button i {
+          font-size: 1rem;
+        }
+      }
+
+      .support-button a {
+        text-transform: capitalize;
+        color: #2ecc71;
+      }
+      @media only screen and (max-width: 575px) {
+        .support-button a {
+          font-size: 13px;
+        }
+      }
+    </style>
+  </head>
+
+  <body onload="usingPhone()">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <div class="d-flex">
+          <a class="navbar-brand mx-5" href="./index.html">
+            <img src="./assets/images/JUDUL.png" alt="" width="70" height="70" />
+          </a>
+        </div>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+          <!-- Left links -->
+          <ul class="navbar-nav mb-lg-0">
+            <!-- Order dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Order </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="order.html#pickUp">Pick Up</a></li>
+                <li><a class="dropdown-item" href="order.html#dropOff">Drop Off</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+              </ul>
+            </li>
+            <!-- Search dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Search </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="./index.html#TT">Track & Trace</a></li>
+                <li><a class="dropdown-item" href="./index.html#SR">Shipping Rate</a></li>
+                <li><a class="dropdown-item" href="./index.html#DP">Find Drop Point</a></li>
+              </ul>
+            </li>
+            <!-- Information dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Information </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                <li><a class="dropdown-item" href="packaging.html">Packaging Information</a></li>
+                <li><a class="dropdown-item" href="term.html">Term</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+        <div class="d-flex me-5">
+          <button class="btn btn-danger" type="submit" data-bs-toggle="modal" data-bs-target="#myModal">
+            <span><i class="fa fa-user mr-3" aria-hidden="true"></i>Login / Register</span>
+          </button>
+        </div>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- END OF NAVBAR -->
+    <div class="faq_area section_padding_130" id="faq">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-8 col-lg-6">
+            <!-- Section Heading-->
+            <div class="section_heading text-center wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp">
+              <h3><span>Frequently </span> Asked Questions</h3>
+
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <!-- FAQ Area-->
+          <div class="col-12 col-sm-10 col-lg-8">
+            <div class="accordion faq-accordian" id="faqAccordion">
+              <div class="card border-0 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp">
+                <div class="card-header" id="headingOne">
+                  <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What are the advantages of Deus Express?<span class="lni-chevron-up"></span></h6>
+                </div>
+                <div class="collapse" id="collapseOne" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                  <div class="card-body">
+                    <p>
+                      You can easily find out the shipping tariff, and check the nearest drop point (branch office) to your location through the application and website. The facilities trace & tracking system will make you easier to track your packages' location during the shipping process. Deus
+                      Express Drop points operate every day (including weekends, and National Holidays)
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card border-0 wow fadeInUp" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp">
+                <div class="card-header" id="headingTwo">
+                  <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">How is Deus Express payment system?<span class="lni-chevron-up"></span></h6>
+                </div>
+                <div class="collapse" id="collapseTwo" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                  <div class="card-body">
+                    <p>For non-corporate customers, the payments should be in cash when sending the package through drop point. For corporate customers, the payment system can be made with special terms and conditions.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card border-0 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp">
+                <div class="card-header" id="headingThree">
+                  <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">How do you check Deus Express waybill number?<span class="lni-chevron-up"></span></h6>
+                </div>
+                <div class="collapse" id="collapseThree" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                  <div class="card-body">
+                    <p>You can check Deus Express waybill number on Deus Express website www.jet.co.id or mobile application.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card border-0 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp">
+                <div class="card-header" id="headingFour">
+                  <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">How and when do you get Deus Express waybill number?<span class="lni-chevron-up"></span></h6>
+                </div>
+                <div class="collapse" id="collapseFour" aria-labelledby="headingFour" data-parent="#faqAccordion">
+                  <div class="card-body">
+                    <p>Waybill numbers will be given directly by Deus Express when the package is sent via drop point.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card border-0 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp">
+                <div class="card-header" id="headingFive">
+                  <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">How do you proceed a claim?<span class="lni-chevron-up"></span></h6>
+                </div>
+                <div class="collapse" id="collapseFive" aria-labelledby="headingFive" data-parent="#faqAccordion">
+                  <div class="card-body">
+                    <p>For proceed the claim, you can contact J&T Express call center 021-8066-1888. Then you can take the claim form at the nearest drop point and complete all the needed requirements.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card border-0 wow fadeInUp" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp">
+                <div class="card-header" id="headingFive">
+                  <h6 class="mb-0 collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">How to send a package with insurance service?<span class="lni-chevron-up"></span></h6>
+                </div>
+                <div class="collapse" id="collapseSix" aria-labelledby="headingSix" data-parent="#faqAccordion">
+                  <div class="card-body">
+                    <p>You can tell the Deus Express drop point admin that you want to insure your shipment goods. Then, Deus Express will calculate your package insurance costs with a calculation 0.2% from the price of the invoice.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <section class="py-5 bg-danger text-white">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./assets/images/JUDUL.png" class="img-thumbnail" width="80" alt="" />
+              <p class="fw-bold mt-2 lead">Kantor Pusat</p>
+              <p style="margin-top: -17px">PT Deus Antar Barang</p>
+              <p class="mt-4">Jl. Sudirman No. 42, Jakarta Pusat 10220, Indonesia</p>
+              <p style="margin-top: -17px">Contact Center: (62-21) 6738 8888</p>
+              <p style="margin-top: -17px">Office: (62-21) 566 12341</p>
+              <p style="margin-top: -17px">Fax: (62-21) 567 1241</p>
+              <p style="margin-top: -17px">Email: customercare@deusxpress.com</p>
+            </div>
+            <div class="col-md-3">
+              <p><b>Perusahaan Kami</b></p>
+              <a href="" class="text-white">About</a><br />
+              <a href="" class="text-white">Career</a><br />
+              <a href="" class="text-white">Standard Condition of Carriage</a><br />
+              <a href="" class="text-white">Company Rules</a><br />
+            </div>
+            <div class="col-md-3">
+              <p><b>Produk Layanan</b></p>
+              <a href="" class="text-white">Deus Xpress</a><br />
+              <a href="" class="text-white">Deus Logistic</a><br />
+              <a href="" class="text-white">Deus Freight</a><br />
+              <a href="" class="text-white">Deus International</a><br />
+            </div>
+            <div class="col-md-2">
+              <p><b>Produk Layanan</b></p>
+              <a href="" class="text-white">Deus Xpress</a><br />
+              <a href="" class="text-white">Deus Logistic</a><br />
+              <a href="" class="text-white">Deus Freight</a><br />
+              <a href="" class="text-white">Deus International</a><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Of Footer -->
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Login</h4>
+                  <button type="button" data-bs-dismiss="modal" class="btn btn-sm btn-danger">
+                    <span><i class="fa fa-close"></i></span>
+                  </button>
+                </div>
+      
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <div class="row text-center">
+                    <div class="col-6">
+                      <a href="#" id="phoneTitle" class="text-danger" onclick="usingPhone()">Phone Number</a>
+                      <hr id="hr1" class="bg-danger" />
+                    </div>
+                    <div class="col-6">
+                      <a href="#" id="userEmailTitle" class="text-dark" onclick="usingUserEmail()">Username/Email</a>
+                      <hr id="hr2" class="bg-dark" />
+                    </div>
+                  </div>
+                  <form action="" method="post">
+                    <div class="form-group" id="phone">
+                      <label for="">Phone Number</label>
+                      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Phone Number" />
+                    </div>
+                    <div class="form-group" id="userEmail">
+                      <label for="">Username / Email</label>
+                      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Username/Email" />
+                    </div>
+                    <div class="form-group">
+                      <label for="">Password</label>
+                      <input type="password" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Password" />
+                    </div>
+                    <a href="">Forgot Password?</a>
+                    <button type="submit" class="btn btn-block btn-danger mt-3">Login</button>
+                    <p class="text-primary mt-3 text-center">Dont't Have Account? <a href="#" class="text-danger">Register Now</a></p>
+                  </form>
+                </div>
+      
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- <script src="./assets/js/bootstrap.bundle.min.js"></script> -->
+    
+  </body>
+</html>

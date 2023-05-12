@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deus Express</title>
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" /> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/font/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/font/css/all.min.css" />
+    <link href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet" />
+  </head>
+  <style>
+    #owl-demo .item {
+      background: #3fbf79;
+      padding: 30px 0px;
+      margin: 10px;
+      color: #fff;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      text-align: center;
+    }
+    .customNavigation {
+      text-align: center;
+    }
+
+    .customNavigation a {
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  </style>
+  <body onload="usingPhone();">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <div class="d-flex">
+          <a class="navbar-brand mx-5" href="./index.html">
+            <img src="./assets/images/JUDUL.png" alt="" width="70" height="70" />
+          </a>
+        </div>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+          <!-- Left links -->
+          <ul class="navbar-nav mb-lg-0">
+            <!-- Order dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Order </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="order.html#pickUp">Pick Up</a></li>
+                <li><a class="dropdown-item" href="order.html#dropOff">Drop Off</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+              </ul>
+            </li>
+            <!-- Search dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Search </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="./index.html#TT">Track & Trace</a></li>
+                <li><a class="dropdown-item" href="./index.html#SR">Shipping Rate</a></li>
+                <li><a class="dropdown-item" href="./index.html#DP">Find Drop Point</a></li>
+              </ul>
+            </li>
+            <!-- Information dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Information </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                <li><a class="dropdown-item" href="packaging.html">Packaging Information</a></li>
+                <li><a class="dropdown-item" href="term.html">Term</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+        <div class="d-flex me-5">
+          <button class="btn btn-danger" type="submit" data-bs-toggle="modal" data-bs-target="#myModal">
+            <span><i class="fa fa-user mr-3" aria-hidden="true"></i>Login / Register</span>
+          </button>
+        </div>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- END OF NAVBAR -->
+    <div class="container mt-3">
+      <div class="owl-carousel owl-theme owl-loaded owl-drag">
+        <div class="owl-stage-outer">
+          <div class="owl-stage" style="transform: translate3d(-1527px, 0px, 0px); transition: all 0.25s ease 0s; width: 3334px">
+            <div class="owl-item">
+              <div class="item">
+                <div class="container mt-2">
+                  <h3>Terms of Daily Services</h3>
+                  <p>1. The sender must pack the package properly to protect package content during transportation. If a loss arises due to improper packaging, the loss is the responsibility of the sender.</p>
+                  <p>2. The weight used as a reference in billing is original weight or dimensional weight which has greater value. If there is a weight addition caused by the additional packaging process carried out by J&T Express, then the billing reference is weight after repackaging.</p>
+                  <p>3. The sender must notify clearly and correctly the contents and value of the package. Incorrect information regarding this matter is entirely the responsibility of the sender.</p>
+                  <p>
+                    4. J&T Express prohibits the delivery of items such as bodies or it parts, live or dead animals, drugs, weapons, ammunition, other combustible materials, high-value art items, securities, money, precious metals, high-value jewelry or the like and items prohibited by applicable
+                    law in Indonesia based on the '45 Constitution.
+                  </p>
+                  <p>
+                    5. J&T Express has the right but is not obliged to inspect package contents to ensure that the goods sent do not violate applicable laws. If without the knowledge of J&T Express, the sender sends items that are prohibited in point 4, the sender hereby releases J&T Express from
+                    all damage or other costs and at the demands of any party.
+                  </p>
+                  <p>6. In the shipping process, J&T Express does not guarantee that the entire process will proceed smoothly and properly, caused by events that may arise beyond the ability of J&T Express in the area through which J&T Express transportation passes.</p>
+
+                  <p>
+                    7. The sender is responsible for protecting the package with adequate insurance and bearing the applicable premium costs. Compensation for goods insured is in accordance with the insurance provisions that apply to J&T Express. If the sender does not use insurance, the payment of
+                    the replacement cost for the lost or damaged items, the maximum is 10 x (ten times) the shipping cost or the lowest value of the goods taken, the maximum of replacement value is Rp.1.000.000 (one million Rupiah).Especially for document shipments, the maximum reimbursement value
+                    is IDR 100.000 (one hundred thousand rupiah). If the sender use insurance, the payment of the replacement cost for the lost or damaged items, the maximum of replacement value is IDR 20.000.000 (Twenty million Rupiah).Especially for document shipments, the maximum reimbursement
+                    value is IDR 2.000.000 (Two million rupiah).
+                  </p>
+
+                  <p>8. J&T Express will not provide compensation to the sender as a result of events or things that are beyond the control ability of J&T Express or damage due to natural disasters (Force Majeure).</p>
+                  <p>If there is no complaint from the recipient when the package is delivered, then the package is deemed to have been received properly and correctly.</p>
+
+                  <p>
+                    10. Complaints / claims for loss or damage must be submitted by the sender (not the recipient) no later than 3 (three) days from the receipt of the item along with the related documents. In addition to the agreement or terms and conditions written on this receipt, J&T Express
+                    cannot be prosecuted and burdened with an agreement or other legal basis except with a written agreement approved by the person in charge of J&T Express authorized. When submitting goods to J&T Express, the sender is deemed to have read and agreed to all the terms and conditions
+                    of delivery stated in this receipt without any coercion from any party, and free J&T Express from all claims or forms of compensation.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <div class="container">
+                  <h3>Terms And Condition</h3>
+                  <p><b>Effective Date : August, 2019</b></p>
+                  <p>These terms and conditions outline the rules and regulations for the use of PT Global Jet Express's (J&T) Website, located at jet.co.id.</p>
+                  <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use J&T Website if you do not agree to take all of the terms and conditions stated on this page.</p>
+                  <p>
+                    The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: "Client", "You" and "Your" refers to you, the person log on this website and compliant to the Company’s terms and conditions. "The Company", "Ourselves",
+                    "We", "Our" and "Us", refers to our Company. "Party", "Parties", or "Us", refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate
+                    manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Indonesia. Any use of the above terminology or other words in the singular, plural, capitalization and/or
+                    he/she or they, are taken as interchangeable and therefore as referring to same.
+                  </p>
+
+                  <p><b>Cookies</b></p>
+                  <p>
+                    We employ the use of cookies. By accessing J&T Website, you agreed to use cookies in agreement with the PT Global Jet Express's Cookies Policy. Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable
+                    the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.
+                  </p>
+
+                  <p><b>License</b></p>
+                  <p>
+                    Unless otherwise stated, PT Global Jet Express and/or its licensors own the intellectual property rights for all material on J&T Website. All intellectual property rights are reserved. You may access this from J&T Website for your own personal use subjected to restrictions set in
+                    these terms and conditions. You must not: Republish material from J&T Website
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <div class="container">
+                  <h3>Privacy Policy</h3>
+                  <p><b>Effective date : August, 2019</b></p>
+
+                  <p>PT.Global Jet Express ("us", "we", or "our") operates the J&T Express Website (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.</p>
+                  <p>
+                    We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, terms used in this Privacy Policy have the same meanings as in our Terms
+                    and Conditions Information Collection And Use We collect several different types of information for various purposes to provide and improve our Service to you Types of Data Collected
+                  </p>
+                  <p><b>Personal Data</b></p>
+                  While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:
+                  <ul>
+                    <li>Email address</li>
+                    <li>First name and last name</li>
+                    <li>Phone number</li>
+                    <li>Address, State, Province, ZIP/Postal code, City</li>
+                  </ul>
+
+                  <p><b>Cookies and Usage Data</b></p>
+                  <p>
+                    Usage Data When you access the Service by or through a personal computer or mobile device, we may collect certain information automatically, including, but not limited to, the type of mobile device you use, your mobile device unique ID, the IP address of your mobile device, your
+                    mobile operating system, the type of mobile Internet browser you use, unique device identifiers and other diagnostic data ("Usage Data")
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <div class="container">
+                  <h3>Cookies Policy</h3>
+                  <p><b> Effective date : August, 2019</b></p>
+                  <p>This is the Cookie Policy for J&T Express Website, accessible from https://jet.co.id</p>
+                  <p><b> What Are Cookies</b></p>
+                  <p>
+                    As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it and why we sometimes need to store these
+                    cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or 'break' certain elements of the sites functionality.
+                  </p>
+                  <p><b> How we use cookies</b></p>
+                  <p>
+                    We use cookies for a variety of reasons detailed below. Unfortunately in most cases there are no industry standard options for disabling cookies without completely disabling the functionality and features they add to this site. It is recommended that you leave on all cookies if
+                    you are not sure whether you need them or not in case they are used to provide a service that you use.
+                  </p>
+                  <p><b>Disabling Cookies </b></p>
+                  <p>
+                    You can prevent the setting of cookies by adjusting the settings on your browser (see your browser Help for how to do this). Be aware that disabling cookies will affect the functionality of this and many other websites that you visit. Disabling cookies will usually result in also
+                    disabling certain functionality and features of the this site. Therefore it is recommended that you do not disable cookies.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="owl-nav disabled"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <section class="py-5 bg-danger text-white">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./assets/images/JUDUL.png" class="img-thumbnail" width="80" alt="" />
+              <p class="fw-bold mt-2 lead">Kantor Pusat</p>
+              <p style="margin-top: -17px">PT Deus Antar Barang</p>
+              <p class="mt-4">Jl. Sudirman No. 42, Jakarta Pusat 10220, Indonesia</p>
+              <p style="margin-top: -17px">Contact Center: (62-21) 6738 8888</p>
+              <p style="margin-top: -17px">Office: (62-21) 566 12341</p>
+              <p style="margin-top: -17px">Fax: (62-21) 567 1241</p>
+              <p style="margin-top: -17px">Email: customercare@deusxpress.com</p>
+            </div>
+            <div class="col-md-3">
+              <p><b>Perusahaan Kami</b></p>
+              <a href="" class="text-white">About</a><br />
+              <a href="" class="text-white">Career</a><br />
+              <a href="" class="text-white">Standard Condition of Carriage</a><br />
+              <a href="" class="text-white">Company Rules</a><br />
+            </div>
+            <div class="col-md-3">
+              <p><b>Produk Layanan</b></p>
+              <a href="" class="text-white">Deus Xpress</a><br />
+              <a href="" class="text-white">Deus Logistic</a><br />
+              <a href="" class="text-white">Deus Freight</a><br />
+              <a href="" class="text-white">Deus International</a><br />
+            </div>
+            <div class="col-md-2">
+              <p><b>Produk Layanan</b></p>
+              <a href="" class="text-white">Deus Xpress</a><br />
+              <a href="" class="text-white">Deus Logistic</a><br />
+              <a href="" class="text-white">Deus Freight</a><br />
+              <a href="" class="text-white">Deus International</a><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Of Footer -->
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" data-bs-dismiss="modal" class="btn btn-sm btn-danger">
+              <span><i class="fa fa-close"></i></span>
+            </button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="row text-center">
+              <div class="col-6">
+                <a href="#" id="phoneTitle" class="text-danger" onclick="usingPhone()">Phone Number</a>
+                <hr id="hr1" class="bg-danger" />
+              </div>
+              <div class="col-6">
+                <a href="#" id="userEmailTitle" class="text-dark" onclick="usingUserEmail()">Username/Email</a>
+                <hr id="hr2" class="bg-dark" />
+              </div>
+            </div>
+            <form action="" method="post">
+              <div class="form-group" id="phone">
+                <label for="">Phone Number</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Phone Number" />
+              </div>
+              <div class="form-group" id="userEmail">
+                <label for="">Username / Email</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Username/Email" />
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Password" />
+              </div>
+              <a href="">Forgot Password?</a>
+              <button type="submit" class="btn btn-block btn-danger mt-3">Login</button>
+              <p class="text-primary mt-3 text-center">Dont't Have Account? <a href="#" class="text-danger">Register Now</a></p>
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <script>
+      var owl = $(".owl-carousel");
+      owl.owlCarousel({
+        items: 1,
+        // items change number for slider display on desktop
+
+        loop: false,
+        margin: 100,
+        dots: false,
+        nav: true,
+        navText: ["<div class='nav-button owl-prev bg-danger'>Previous</div>", "<div class='nav-button owl-next bg-danger'>Next</div>"],
+      });
+    </script>
+  </body>
+</html>

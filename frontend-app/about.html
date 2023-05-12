@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deus Express</title>
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" /> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/font/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/font/css/all.min.css" />
+    <link href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet" />
+
+    <style>
+      .owl-item {
+        width: 128.906px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body onload="usingPhone()">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <div class="d-flex">
+          <a class="navbar-brand mx-5" href="./index.html">
+            <img src="./assets/images/JUDUL.png" alt="" width="70" height="70" />
+          </a>
+        </div>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+          <!-- Left links -->
+          <ul class="navbar-nav mb-lg-0">
+            <!-- Order dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Order </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="order.html#pickUp">Pick Up</a></li>
+                <li><a class="dropdown-item" href="order.html#dropOff">Drop Off</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+              </ul>
+            </li>
+            <!-- Search dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Search </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="./index.html#TT">Track & Trace</a></li>
+                <li><a class="dropdown-item" href="./index.html#SR">Shipping Rate</a></li>
+                <li><a class="dropdown-item" href="./index.html#DP">Find Drop Point</a></li>
+              </ul>
+            </li>
+            <!-- Information dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Information </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                <li><a class="dropdown-item" href="packaging.html">Packaging Information</a></li>
+                <li><a class="dropdown-item" href="term.html">Term</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+        <div class="d-flex me-5">
+          <button class="btn btn-danger" type="submit" data-bs-toggle="modal" data-bs-target="#myModal">
+            <span><i class="fa fa-user mr-3" aria-hidden="true"></i>Login / Register</span>
+          </button>
+        </div>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- END OF NAVBAR -->
+
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid" style="background-image: url('./assets/images/unsplash_iBNKSkFftps.png'); height: 200px; width: auto">
+      <div class="container">
+        <h1 class="display-5 fw-bold text-white">About Us</h1>
+      </div>
+    </div>
+    <!-- End Of Jumbotron -->
+
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center text-danger">
+          <h1>History of Deus Express</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-2">
+            <button class="btn btn-danger btn-block" id="btnCompro" onclick="comproFunc()">Company Profile</button>
+            <button class="btn btn-secondary btn-block" id="btnHist" onclick="histFunc()">History</button>
+            <button class="btn btn-secondary btn-block" id="btnMotto" onclick="mottoFunc()">Our Motto</button>
+            <button class="btn btn-secondary btn-block" id="btnPart" onclick="partnerFunc()">Our Partner</button>
+          </div>
+          <div class="col-md-10">
+            <div class="card" id="compro">
+              <div class="card-body">
+                <p class="card-text">
+                  Deus Xpress is a logistic service with an extensive ecosystem throughout Indonesia. We aim to create better job opportunities to support Indonesia's economy. Started in 2018, Deus Xpress has now become one of the fastest growing logistics companies in Indonesia that adapts and
+                  embraces the technology at the core of our services.
+                </p>
+                <p class="card-text">
+                  Consistently fast, responsible and reliable service has brought Deus Xpress into a higher credibility for customers and partners. Along with the increase in foreign investment, national economic growth, the information technology development, and innovations of developed products,
+                  the performance of Deus Xpress keeps growing and developing in the business world and the people of Indonesia.
+                </p>
+                <p class="card-text">
+                  The business growth and lifestyle evolution has contributed in increasing time-sensitive import delivery demand. Not only small package and document scope, but also in handling transportation, logistics, and distribution. This growing opportunity has encouraged Deus Xpress to
+                  expand its network to all major cities in Indonesia. Today, JNE has reached over 6,000 service locations and still counting, with more than 40,000 employees.
+                </p>
+                <p class="card-text">
+                  More than 150 Deus Xpress service locations has been linked with online communication system, guided by the system and information site access that is effective and efficient for consumers to trace and track the current status of packages or documents delivery. Deus Xpress
+                  incorporates both human resources and technology such as X-Ray machine, GPS, and satellite communication tools at the same time as a part of the company development.
+                </p>
+                <p class="card-text">Deus Xpress’s reliability and commitment has been proved by the various awards and ISO 9001: 2008 achievement on quality management system.</p>
+              </div>
+            </div>
+            <div class="card" id="history">
+              <img class="card-img-top" src="./assets/images/Group 28.png" alt="" />
+            </div>
+            <div class="card" id="motto">
+              <div class="card-body">
+                <h4 class="card-title text-danger">Our Vision</h4>
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-text">Becoming the best logistic company by providing convenience for all Indonesians while supporting Indonesia's economic growth.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body mt-1">
+                <h4 class="card-title text-danger">Our Mission</h4>
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-text">To Provide Excellent Customer Experience Consistently. Customer-Oriented & Efficiency-Based</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-body mt-1">
+                <h4 class="card-title text-danger">Our Values</h4>
+                <div class="card">
+                  <div class="card-body">
+                    <p class="card-text">Honesty, Visionery, Benfen, Sharing, Responsibility.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card" id="partner">
+              <div class="card-body">
+                <h4 class="card-title text-danger">Our Partner</h4>
+                <div class="card mt-4 mb-2">
+                  <div class="card-body">
+                    <p class="card-text">We are proud and grateful for the trust to serve the delivery of the best partners</p>
+                  </div>
+                </div>
+                <div class="card mt-5">
+                  <div class="card-body">
+                    <div class="owl-carousel owl-theme owl-loaded owl-drag">
+                      <div class="owl-stage-outer">
+                        <div class="owl-stage" style="transform: translate3d(-1527px, 0px, 0px); transition: all 0.25s ease 0s; width: 3334px">
+                          <div class="owl-item">
+                            <div class="item">
+                              <img src="./assets/images/sope.png" class="img-fluid" alt="" />
+                            </div>
+                          </div>
+                          <div class="owl-item">
+                            <div class="item">
+                              <img src="./assets/images/toped.png" class="img-fluid" alt="" />
+                            </div>
+                          </div>
+                          <div class="owl-item">
+                            <div class="item">
+                              <img src="./assets/images/bli.png" class="img-fluid" alt="" />
+                            </div>
+                          </div>
+                          <div class="owl-item">
+                            <div class="item">
+                              <img src="./assets/images/laz.png" class="img-fluid" alt="" />
+                            </div>
+                          </div>
+                          <div class="owl-item">
+                            <div class="item">
+                              <img src="./assets/images/buka.png" class="img-fluid" alt="" />
+                            </div>
+                          </div>
+                          <div class="owl-item">
+                            <div class="item">
+                              <img src="./assets/images/titok.png" class="img-fluid" alt="" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="owl-nav disabled"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="py-5 bg-danger text-white">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./assets/images/JUDUL.png" class="img-thumbnail" width="80" alt="" />
+              <p class="fw-bold mt-2 lead">Kantor Pusat</p>
+              <p style="margin-top: -17px">PT Deus Antar Barang</p>
+              <p class="mt-4">Jl. Sudirman No. 42, Jakarta Pusat 10220, Indonesia</p>
+              <p style="margin-top: -17px">Contact Center: (62-21) 6738 8888</p>
+              <p style="margin-top: -17px">Office: (62-21) 566 12341</p>
+              <p style="margin-top: -17px">Fax: (62-21) 567 1241</p>
+              <p style="margin-top: -17px">Email: customercare@deusxpress.com</p>
+            </div>
+            <div class="col-md-3">
+              <p><b>Perusahaan Kami</b></p>
+              <a href="" class="text-white">About</a><br />
+              <a href="" class="text-white">Career</a><br />
+              <a href="" class="text-white">Standard Condition of Carriage</a><br />
+              <a href="" class="text-white">Company Rules</a><br />
+            </div>
+            <div class="col-md-3">
+              <p><b>Produk Layanan</b></p>
+              <a href="" class="text-white">Deus Xpress</a><br />
+              <a href="" class="text-white">Deus Logistic</a><br />
+              <a href="" class="text-white">Deus Freight</a><br />
+              <a href="" class="text-white">Deus International</a><br />
+            </div>
+            <div class="col-md-2">
+              <p><b>Produk Layanan</b></p>
+              <a href="" class="text-white">Deus Xpress</a><br />
+              <a href="" class="text-white">Deus Logistic</a><br />
+              <a href="" class="text-white">Deus Freight</a><br />
+              <a href="" class="text-white">Deus International</a><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Of Footer -->
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" data-bs-dismiss="modal" class="btn btn-sm btn-danger">
+              <span><i class="fa fa-close"></i></span>
+            </button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="row text-center">
+              <div class="col-6">
+                <a href="#" id="phoneTitle" class="text-danger" onclick="usingPhone()">Phone Number</a>
+                <hr id="hr1" class="bg-danger" />
+              </div>
+              <div class="col-6">
+                <a href="#" id="userEmailTitle" class="text-dark" onclick="usingUserEmail()">Username/Email</a>
+                <hr id="hr2" class="bg-dark" />
+              </div>
+            </div>
+            <form action="" method="post">
+              <div class="form-group" id="phone">
+                <label for="">Phone Number</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Phone Number" />
+              </div>
+              <div class="form-group" id="userEmail">
+                <label for="">Username / Email</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Username/Email" />
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Password" />
+              </div>
+              <a href="">Forgot Password?</a>
+              <button type="submit" class="btn btn-block btn-danger mt-3">Login</button>
+              <p class="text-primary mt-3 text-center">Dont't Have Account? <a href="#" class="text-danger">Register Now</a></p>
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <script>
+      var owl = $(".owl-carousel");
+      owl.owlCarousel({
+        items: 4,
+        // items change number for slider display on desktop
+
+        loop: true,
+        margin: 100,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+      });
+    </script>
+  </body>
+</html>

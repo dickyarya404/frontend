@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deus Express</title>
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" /> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/font/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/font/css/all.min.css" />
+    <link href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet" />
+  </head>
+  <style>
+    .heading {
+      font-size: 20px;
+      font-weight: 600;
+      color: #3d5afe;
+    }
+
+    .line1 {
+      color: #000;
+      font-size: 12px;
+    }
+    .line2 {
+      color: #000;
+      font-size: 12px;
+    }
+    .line3 {
+      color: #000;
+      font-size: 12px;
+    }
+
+    .cards {
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .cards:hover {
+      box-shadow: 5px 6px 6px 2px #e9ecef;
+      transform: scale(1.1);
+    }
+    #owl-demo .item {
+      background: #3fbf79;
+      padding: 30px 0px;
+      margin: 10px;
+      color: #fff;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      text-align: center;
+    }
+    .customNavigation {
+      text-align: center;
+    }
+
+    .customNavigation a {
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+  </style>
+  <body onload="usingPhone();">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- Container wrapper -->
+      <div class="container-fluid">
+        <div class="d-flex">
+          <a class="navbar-brand mx-5" href="./index.html">
+            <img src="./assets/images/JUDUL.png" alt="" width="70" height="70" />
+          </a>
+        </div>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+          <!-- Left links -->
+          <ul class="navbar-nav mb-lg-0">
+            <!-- Order dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Order </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="order.html#pickUp">Pick Up</a></li>
+                <li><a class="dropdown-item" href="order.html#dropOff">Drop Off</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+              </ul>
+            </li>
+            <!-- Search dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Search </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="./index.html#TT">Track & Trace</a></li>
+                <li><a class="dropdown-item" href="./index.html#SR">Shipping Rate</a></li>
+                <li><a class="dropdown-item" href="./index.html#DP">Find Drop Point</a></li>
+              </ul>
+            </li>
+            <!-- Information dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Information </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                <li><a class="dropdown-item" href="packaging.html">Packaging Information</a></li>
+                <li><a class="dropdown-item" href="term.html">Term</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+        <div class="d-flex me-5">
+          <button class="btn btn-danger" type="submit" data-bs-toggle="modal" data-bs-target="#myModal">
+            <span><i class="fa fa-user mr-3" aria-hidden="true"></i>Login / Register</span>
+          </button>
+        </div>
+      </div>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- END OF NAVBAR -->
+    <div class="container mt-3">
+      <div class="owl-carousel owl-theme owl-loaded owl-drag">
+        <div class="owl-stage-outer">
+          <div class="owl-stage" style="transform: translate3d(-1527px, 0px, 0px); transition: all 0.25s ease 0s; width: 3334px">
+            <div class="owl-item">
+              <div class="item">
+                <h2 class="text-center">Guidance</h2>
+                <div class="container mt-4 d-flex justify-content-center">
+                  <div class="row g-0">
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-archive text-danger"></i>
+                          <h5>How to pack liquids and fragile goods</h5>
+                          <p class="line1">
+                            Make sure the goods are packed by using cardboard box, Cover the goods by using bubble wrap,use at least three to five layers of bubble wrap depends on the fragility of the package, Use PE foam on each side of the box for a shock absorber, Make sure the size of the goods
+                            is appropriate with the box
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-archive text-danger"></i>
+                          <h5>How to pack electronic goods</h5>
+                          <p class="line1">Every goods must have an outer packaging or commercial packaging, Cover goods by using bubble wrap, Use PE foam on each side of the box for a shock absorber, Make sure the size of the goods is appropriate with the box</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-archive text-danger"></i>
+                          <h5>How to pack large and long goods</h5>
+                          <p class="line1">
+                            Every goods must have an outer packaging or commercial packaging, Cover goods by using bubble wrap, use at least three to five layers of bubble wrap depends on he fragility of he package, Sealed the box by using duct tape tightly to avoid shocks that can cause damages
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-archive text-danger"></i>
+                          <h5>How to attach shipping label</h5>
+                          <p class="line1">If the sender attaches a shipping label from e-commerce platfrorm, Make sure is attached to a flat surface, not folded and not bubbling</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-archive text-danger"></i>
+                          <h5>How to attach the duct tape</h5>
+                          <p class="line1">The box needs to be sealed by duct tape, Make "#" form, Make sure the duct tape is sealed tightly and not bubbling</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-archive text-danger"></i>
+                          <h5>Package size information</h5>
+                          <p class="line1">Size of the package must be bigger than Deus Express electronik receipt (25 cm x 15 cm)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <h2 class="text-center">Dangerous Goods</h2>
+                <div class="container mt-4 d-flex justify-content-center">
+                  <div class="row g-0">
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-exclamation text-danger"></i>
+                          <h5>Dangerous Goods Class 1</h5>
+                          <p class="line1">Fireworks, Ammunition/cartridges, Airbag inflators, TNT compositions, Flares</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-fire text-danger"></i>
+                          <h5>Dangerous Goods Class 2</h5>
+                          <p class="line1">Aerosol, Gas Cylinder (filled), Silicon, Fire Stop, Nail Polish, Gas CO2</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-bolt text-danger"></i>
+                          <h5>Dangerous Goods Class 3</h5>
+                          <p class="line1">Glue, Parfume, Paint Cans, Oil, Sanpoly, Toner, Gasoline gauge</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-battery text-danger"></i>
+                          <h5>Dangerous Goods Class 4</h5>
+                          <p class="line1">Alkali metals, Alumunium phosephide, Carbon, Camphor, Oily fabrics</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-hourglass text-danger"></i>
+                          <h5>Dangerous Goods Class 5</h5>
+                          <p class="line1">Organic peroxides, Oxidizing substances</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-poo text-danger"></i>
+                          <h5>Dangerous Goods Class 5</h5>
+                          <p class="line1">Pesticide, Toner Powder, Insecticide</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="owl-item">
+              <div class="item">
+                <h2 class="text-center">Prohibited</h2>
+                <div class="container mt-4 d-flex justify-content-center">
+                  <div class="row g-0">
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-exclamation text-danger"></i>
+                          <h5>Firearms</h5>
+                          <p class="line1">All kinds of ammunitions, firearms, bullets, grenades, bombs, etc</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-fire text-danger"></i>
+                          <h5>Explosive Materials</h5>
+                          <p class="line1">Easily explosive materials like explosive materials & detonator, gunpowder, firecrackers, etc</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-bolt text-danger"></i>
+                          <h5>Flammable</h5>
+                          <p class="line1">All kinds of flammable material, including liquid, gas and solid chemistry. Like gasoline, kerosene, alcohol, varnish, diesel fuel, aerosol/ spray tube, lighters, gas holder, phosphorus, sulfur, matches, etc</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-warning text-danger"></i>
+                          <h5>Drugs</h5>
+                          <p class="line1">All kinds of narcotic drugs like, opium (including flowers, sprout and opium leaf), morn, cocaine, heroin, marijuana, methamphetamine, ephedrine, and other related products</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-warning text-danger"></i>
+                          <h5>Chemical</h5>
+                          <p class="line1">All kinds of corrosive materials like sulfuric acid, hydrochloric acid, nitric acid, organic solvents, pesticide, hydrogen peroxide, and other hazardous chemicals</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-4 border-right">
+                      <div class="cards">
+                        <div class="first bg-white p-4 text-center">
+                          <i class="fa fa-warning text-danger"></i>
+                          <h5>Radioactive</h5>
+                          <p class="line1">Various types of radioactive elements and its depository like uranium, cobalt, radium and plutonium</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="owl-nav disabled"></div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <section class="py-5 bg-danger text-white">
+      <div class="container-fluid">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <img src="./assets/images/JUDUL.png" class="img-thumbnail" width="80" alt="" />
+              <p class="fw-bold mt-2 lead">Kantor Pusat</p>
+              <p style="margin-top: -17px">PT Deus Antar Barang</p>
+              <p class="mt-4">Jl. Sudirman No. 42, Jakarta Pusat 10220, Indonesia</p>
+              <p style="margin-top: -17px">Contact Center: (62-21) 6738 8888</p>
+              <p style="margin-top: -17px">Office: (62-21) 566 12341</p>
+              <p style="margin-top: -17px">Fax: (62-21) 567 1241</p>
+              <p style="margin-top: -17px">Email: customercare@deusxpress.com</p>
+            </div>
+            <div class="col-md-3">
+              <p><b>Perusahaan Kami</b></p>
+              <a href="" class="text-white">About</a><br />
+              <a href="" class="text-white">Career</a><br />
+              <a href="" class="text-white">Standard Condition of Carriage</a><br />
+              <a href="" class="text-white">Company Rules</a><br />
+            </div>
+            <div class="col-md-3">
+              <p><b>Produk Layanan</b></p>
+              <a href="" class="text-white">Deus Xpress</a><br />
+              <a href="" class="text-white">Deus Logistic</a><br />
+              <a href="" class="text-white">Deus Freight</a><br />
+              <a href="" class="text-white">Deus International</a><br />
+            </div>
+            <div class="col-md-2">
+              <p><b>Produk Layanan</b></p>
+              <a href="" class="text-white">Deus Xpress</a><br />
+              <a href="" class="text-white">Deus Logistic</a><br />
+              <a href="" class="text-white">Deus Freight</a><br />
+              <a href="" class="text-white">Deus International</a><br />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Of Footer -->
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button" data-bs-dismiss="modal" class="btn btn-sm btn-danger">
+              <span><i class="fa fa-close"></i></span>
+            </button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="row text-center">
+              <div class="col-6">
+                <a href="#" id="phoneTitle" class="text-danger" onclick="usingPhone()">Phone Number</a>
+                <hr id="hr1" class="bg-danger" />
+              </div>
+              <div class="col-6">
+                <a href="#" id="userEmailTitle" class="text-dark" onclick="usingUserEmail()">Username/Email</a>
+                <hr id="hr2" class="bg-dark" />
+              </div>
+            </div>
+            <form action="" method="post">
+              <div class="form-group" id="phone">
+                <label for="">Phone Number</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Phone Number" />
+              </div>
+              <div class="form-group" id="userEmail">
+                <label for="">Username / Email</label>
+                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Username/Email" />
+              </div>
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control" name="" id="" aria-describedby="helpId" placeholder="Password" />
+              </div>
+              <a href="">Forgot Password?</a>
+              <button type="submit" class="btn btn-block btn-danger mt-3">Login</button>
+              <p class="text-primary mt-3 text-center">Dont't Have Account? <a href="#" class="text-danger">Register Now</a></p>
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/vendors/jquery.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <script>
+      var owl = $(".owl-carousel");
+      owl.owlCarousel({
+        items: 1,
+        // items change number for slider display on desktop
+
+        loop: false,
+        margin: 100,
+        dots: false,
+        nav: true,
+        navText: ["<div class='nav-button owl-prev bg-danger'>Previous</div>", "<div class='nav-button owl-next bg-danger'>Next</div>"],
+      });
+    </script>
+  </body>
+</html>
